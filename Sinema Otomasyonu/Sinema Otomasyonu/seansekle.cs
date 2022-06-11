@@ -44,6 +44,7 @@ namespace Sinema_Otomasyonu
                     comboBox1.Items.Add(kayitokuma.GetValue(1).ToString());
                 }
                 baglantim.Close();
+                comboBox1.SelectedIndex = 0;
             }
             catch (Exception hatamsj)
             {
@@ -65,6 +66,7 @@ namespace Sinema_Otomasyonu
                     comboBox2.Items.Add(kayitokuma.GetValue(1).ToString());
                 }
                 baglantim.Close();
+                comboBox2.SelectedIndex = 0;
             }
             catch (Exception hatamsj)
             {
@@ -81,7 +83,29 @@ namespace Sinema_Otomasyonu
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedItem.ToString() != "Seçiniz..." && comboBox2.SelectedItem.ToString() != "Seçiniz..." && comboBox3.SelectedItem.ToString() != "Seçiniz..." && dateTimePicker1.Text!="" )
+            {
+                try
+                {
+                    baglantim.Open();
+                    OleDbCommand salonSave = new OleDbCommand("INSERT INTO seans (filmAdi,salon,tarih,seans) VALUES('" + comboBox1.SelectedItem.ToString() + "','" + comboBox2.SelectedItem.ToString() + "','" + dateTimePicker1.Text + "','" + comboBox3.SelectedItem.ToString() + "')", baglantim);
+                    salonSave.ExecuteNonQuery();
+                    baglantim.Close();
+                    MessageBox.Show("Seans başarı ile kaydedildi !", "Sinema Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception msg)
+                {
 
+                    MessageBox.Show(msg.Message, "Sinema Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    baglantim.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Boş Alan Bırakmayınız !", "Sinema Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }
