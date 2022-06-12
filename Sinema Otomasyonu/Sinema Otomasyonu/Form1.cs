@@ -107,5 +107,11 @@ namespace Sinema_Otomasyonu
                 }
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            seanslist seanslist = new seanslist();
+            seanslist.Show();
+        }
     }
 }

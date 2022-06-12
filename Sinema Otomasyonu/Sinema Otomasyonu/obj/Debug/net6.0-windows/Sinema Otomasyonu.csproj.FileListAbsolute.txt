@@ -22,3 +22,4 @@ C:\repo\sinemaotomasyonu\Sinema Otomasyonu\Sinema Otomasyonu\bin\Debug\net6.0-wi
 C:\repo\sinemaotomasyonu\Sinema Otomasyonu\Sinema Otomasyonu\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Data.OleDb.dll
 C:\repo\sinemaotomasyonu\Sinema Otomasyonu\Sinema Otomasyonu\obj\Debug\net6.0-windows\Sinema Otomasyonu.csproj.CopyComplete
 C:\repo\sinemaotomasyonu\Sinema Otomasyonu\Sinema Otomasyonu\obj\Debug\net6.0-windows\Sinema_Otomasyonu.seansekle.resources
+C:\repo\sinemaotomasyonu\Sinema Otomasyonu\Sinema Otomasyonu\obj\Debug\net6.0-windows\Sinema_Otomasyonu.seanslist.resources
